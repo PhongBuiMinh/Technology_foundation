@@ -1,0 +1,11 @@
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra
+
+libmath.a: math.o utils.o
+	ar rcs libmath.a math.o utils.o
+
+math.o: math.c
+	$(CC) $(CFLAGS) -c math.c
+
+utils.o: utils.c
+	$(CC) $(CFLAGS) -c utils.c

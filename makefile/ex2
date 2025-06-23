@@ -1,0 +1,14 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+
+app: main.o utils.o
+	$(CC) $(CFLAGS) main.o utils.o -o app
+
+main.o: main.c
+	$(CC) $(CFLAGS) -c main.c
+
+utils.o: utils.c
+	$(CC) $(CFLAGS) -c utils.c
+
+clean:
+	rm -f app main.o utils.o
