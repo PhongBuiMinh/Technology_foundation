@@ -105,9 +105,3 @@ git remote add repo_alias repo-url
 git branch -M main
 git push -u repo_alias main
 ```
-# Project Overview
-
-## Topics
-- [Git Introduction](./intro-git.md)
-- [Docker Introduction](./intro-docker.md)
-- [Linux Introduction](./intro-linux.md)
