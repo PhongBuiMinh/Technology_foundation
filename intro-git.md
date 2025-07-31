@@ -61,7 +61,7 @@ git push -u repo_alias branch
 
 ## 📦 SUBPUSH
 
-### Split and push a subdirectory (e.g., `b` folder)
+### Split and push a subdirectory
 ```bash
 git subtree split -P path_to_directory -b new_branch_name
 git push new_remote new_branch_name:main
@@ -105,4 +105,9 @@ git remote add repo_alias repo-url
 git branch -M main
 git push -u repo_alias main
 ```
+# Project Overview
 
+## Topics
+- [Git Introduction](./intro-git.md)
+- [Docker Introduction](./intro-docker.md)
+- [Linux Introduction](./intro-linux.md)
