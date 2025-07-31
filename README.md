@@ -36,7 +36,7 @@ git push origin --delete branch-name   # Delete remote branch
 
 ---
 
-## 🌍 Local ## 🌍 Local vs Remote Branches
+## 🌍 Local vs Remote Branches
 
 | Concept       | Local Branch       | Remote Branch         |
 |---------------|--------------------|------------------------|
