@@ -4,25 +4,11 @@
 
 ## 🗂️ REPOSITORY
 
-### Create a new repository
-```bash
-git init
-```
-Creates a `.git` directory in the folder and turns it into a Git repo—start a fresh repository.
-
-### Add a remote
-```bash
-git remote add repo_alias repo-url
-```
-Connects your local repository to a remote URL (e.g., GitHub, GitLab).
-
-### Clone an existing repository
-```bash
-git clone repo-url
-```
-Copies the entire setup (commits, branches, files) from a remote repo into your machine.
-
----
+| Command        | Superpower |
+|----------------|------------|
+| `git init`     | Creates a `.git` directory in the folder and turns it into a Git repo—start a fresh repository. |
+| `git remote add` | Links your local repository to a remote URL (e.g., GitHub, GitLab). |
+| `git clone`    | Copies the entire setup (commits, branches, files) from a remote repo into your machine. |
 
 ## 🌿 BRANCH
 
