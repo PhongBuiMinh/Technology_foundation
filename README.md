@@ -59,7 +59,7 @@ git push -u repo_alias branch
 
 ---
 
-## 📦 SUBPROJECT
+## 📦 SUBPUSH
 
 ### Split and push a subdirectory (e.g., `b` folder)
 ```bash
