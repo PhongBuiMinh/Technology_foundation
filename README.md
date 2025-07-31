@@ -1,4 +1,4 @@
-# 🧭 Git FOUNDATION
+# 🧭 Git Foundation
 
 ---
 
