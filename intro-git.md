@@ -86,6 +86,17 @@ Brings remote changes into your current branch—fetches and merges together.
 
 ---
 
+## 📚 LOG
+```bash
+git log --oneline --graph --decorate --all
+```
+| Flag           | Description                                                  |
+|----------------|--------------------------------------------------------------|
+| `--oneline`    | Displays each commit as a single concise line.               |
+| `--graph`      | Adds an ASCII graph showing branches and merges.             |
+| `--decorate`   | Shows branch names and tags next to commit messages.         |
+| `--all`        | Includes commits from all branches, not just the current one.|
+
 ## 🏁 Repository Creation Examples
 
 ### Option 1: Create a new repo and push
