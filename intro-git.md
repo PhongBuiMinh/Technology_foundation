@@ -52,7 +52,7 @@ git push origin --delete branch-name   # Delete remote branch
 ### Typical workflow
 ```bash
 git status
-git add .
+git add changes
 git commit -m "your message"
 git push -u repo_alias branch
 ```
