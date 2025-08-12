@@ -30,7 +30,7 @@ Equivalent to: `git branch new_branch` + `git checkout new_branch`
 
 ### Operation
 ```bash
-git branch -d branch-name               # Delete local branch
+git branch -d branch-name              # Delete local branch
 git push origin --delete branch-name   # Delete remote branch
 ```
 
@@ -52,7 +52,7 @@ git push origin --delete branch-name   # Delete remote branch
 ### Typical workflow
 ```bash
 git status
-git add changes
+git add <changes>
 git commit -m "your message"
 git push -u repo_alias branch
 ```
