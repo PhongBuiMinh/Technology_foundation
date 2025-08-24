@@ -49,12 +49,15 @@ git push origin --delete branch-name   # Delete remote branch
 
 ## 🚀 PUSH
 
+Push is allowed only if the local branch is ahead of the remote. The remote branch doesn't have commits that the local branch does. This ensure the remote branch won't be overwritten.
+
 ### Typical workflow
 ```bash
 git status
 git add <changes>
 git commit -m "your message"
 git push -u repo_alias branch
+git push --force ... ... ...             # overwrite the remote_branch with the local_branch
 ```
 
 ---
@@ -63,8 +66,9 @@ git push -u repo_alias branch
 
 ### Split and push a subdirectory
 ```bash
-git subtree split -P path_to_directory -b new_branch_name
-git push new_remote new_branch_name:main # local_branch:remote_branch
+git subtree split -P path_to_directory -b new_branch
+git ls-tree -r --name-only new_branch_name # list files and directories in a branch
+git push repo_alias new_branch:main        # local_branch:remote_branch
 ```
 Creates a subtree split for the directory and pushes that split as a separate branch named `main`.
 
@@ -74,9 +78,21 @@ Creates a subtree split for the directory and pushes that split as a separate br
 
 ### Non-intrusive: fetch updates
 ```bash
-git fetch
+git fetch repo_alias branch
 ```
 Grabs new commits from the remote without merging—like observing quietly.
+
+### Streamlined Update: Fetch + Rebase
+```bash
+git rebase repo_alias/remote_branch
+```
+Rewrites the local branch by reaplying the commits on top of remote branch. The history is linear (rewritten).
+
+### Traditional Update: Fetch + Merge
+```bash
+git merge repo_alias/remote_branch
+```
+Create a new merge commit in the local branch by combining the changes from both banches. The history includes merge commits (preserved).
 
 ### Full update: fetch + merge
 ```bash
@@ -88,7 +104,8 @@ Brings remote changes into your current branch—fetches and merges together.
 
 ## 📚 LOG
 ```bash
-git log --oneline --graph --decorate --all
+git log --oneline --graph --decorate --all branch_name
+
 ```
 | Flag           | Description                                                  |
 |----------------|--------------------------------------------------------------|
