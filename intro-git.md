@@ -2,7 +2,7 @@
 
 ---
 
-## 🗂️ REPOSITORY
+## 🗂️ GIT REPOSITORY
 
 | Command        | Superpower |
 |----------------|------------|
@@ -67,8 +67,8 @@ git push --force ... ... ...             # overwrite the remote_branch with the 
 ### Split and push a subdirectory
 ```bash
 git subtree split -P path_to_directory -b new_branch
-git ls-tree -r --name-only new_branch_name # list files and directories in a branch
-git push repo_alias new_branch:main        # local_branch:remote_branch
+git ls-tree -r --name-only new_branch_name              # list files and directories in a branch
+git push repo_alias new_branch:main                     # local_branch:remote_branch
 ```
 Creates a subtree split for the directory and pushes that split as a separate branch named `main`.
 
