@@ -64,7 +64,7 @@ git push -u repo_alias branch
 ### Split and push a subdirectory
 ```bash
 git subtree split -P path_to_directory -b new_branch_name
-git push new_remote new_branch_name:main
+git push new_remote new_branch_name:main # local_branch:remote_branch
 ```
 Creates a subtree split for the directory and pushes that split as a separate branch named `main`.
 
