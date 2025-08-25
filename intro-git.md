@@ -27,7 +27,7 @@ git branch -M main                       # rename current branch to 'main'
 git branch -m master main                # rename branch 'master' to 'main'
 git checkout new_branch                  # switch to a new branch
 ```
-Combination: `git checkout -b local_branch remote_alias/remote_branch` creates local_branch -> sets it to track remote_branch -> copies commit history -> switches to local_branch
+Combination: `git checkout -b local_branch remote_alias/remote_branch` creates local_branch -> sets it to track remote_branch -> copies commit history -> switches to local_branch.
 
 ### Operation
 ```bash
