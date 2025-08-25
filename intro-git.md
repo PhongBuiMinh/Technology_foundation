@@ -36,6 +36,8 @@ git branch -d branch-name                # delete local branch
 git push origin --delete branch-name     # delete remote branch
 ```
 
+current branch -> repo_alias/HEAD.
+
 ---
 
 ## 🌍 Local vs Remote Branches
@@ -46,8 +48,6 @@ git push origin --delete branch-name     # delete remote branch
 | Created By    | `git checkout -b`   | `git push` from local  |
 | Shared?       | No (until pushed)   | Yes (visible to others) |
 | Updated By    | `git commit`        | `git push` / `git fetch` |
-
-current branch - repo_alias/HEAD
 
 ---
 
