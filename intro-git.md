@@ -10,7 +10,7 @@
 | `git remote add alias_repo URL` | Links the local repository to a remote URL (e.g., GitHub, GitLab). |
 | `git clone`    | Copies the entire setup (commits, branches, files) from a remote repo into the machine. |
 
-!Every git enviroment has its branch with history.
+!Every git repository has its OWN branch/es with history.
 
 ## 🌿 BRANCH
 
