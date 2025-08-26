@@ -47,13 +47,14 @@ repo_alias/HEAD -> repo_alias/remote_branch    # remote's default branch
 ```bash
 git branch -M main                       # rename current branch to 'main'
 git branch -m master main                # rename branch 'master' to 'main'
-git checkout new_branch                  # switch to a new branch
+git checkout (-b) branch                 # switch to a branch, -b create branch
 ```
 Combination: `git checkout -b local_branch remote_alias/remote_branch` creates local_branch -> sets it to track remote_branch -> copies commit history -> switches to local_branch.
 
 ### Operation
 ```bash
 git branch new_branch                    # create local branch
+git branch repo_alias/new_branch         # create remote branch
 git branch -d branch-name                # delete local branch
 git push origin --delete branch-name     # delete remote branch
 ```
@@ -65,7 +66,7 @@ git push origin --delete branch-name     # delete remote branch
 | Concept       | Local Branch       | Remote Branch         |
 |---------------|--------------------|------------------------|
 | Location      | Your machine        | Remote server (e.g., GitHub) |
-| Created By    | `git checkout -b`   | `git push` from local  |
+| Created By    | `git checkout -b`   | ONLY `git push` from local  |
 | Shared?       | No (until pushed)   | Yes (visible to others) |
 | Updated By    | `git commit`        | `git push` / `git fetch` |
 
@@ -80,7 +81,7 @@ Git push command pushes commits, files, history from LOCAL to REMOTE branch.
 git status
 git add changes                                                # stage files
 git commit -m "your message"                                   # RECORD and ADD snapshot to default local_branch (create) or specified one (apply) 
-git push -u repo_alias (local_branch:)remote_branch            # push local to remote and set tracking
+git push -u repo_alias (local_branch:)remote_branch            # push local to remote, -u set tracking, create repo_alias/repo_branch if it doesnt exist
 git push --force ... ... ...                                   # overwrite the remote_branch with the local_branch
 ```
 !Push is allowed only if the local branch is ahead of the remote.
