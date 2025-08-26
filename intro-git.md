@@ -25,7 +25,7 @@ SSH is like having a private tunnel between client and server, it uses a pair of
 ### HTTPS - PERSONAL ACCESS TOKEN
 ```bash
 github_settings
-choose fine-grained or classic token # classic - general scope - entire account; detailed - specific repos
+choose "fine-grained" or "classic token"          # classic: general scope - entire account; fine-grained detailed - specific repos
 get scopes (permission)
 generate and copy
 ```
