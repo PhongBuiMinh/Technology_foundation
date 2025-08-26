@@ -4,7 +4,7 @@
 
 ## 🗂️ GIT REPOSITORY
 
-| Command        | Superpower |
+| Command        | Detail |
 |----------------|------------|
 | `git init`     | Creates a `.git` directory in the folder and turns it into a Git repo—start a fresh repository. |
 | `git remote add alias_repo URL` | Links the local repository to a remote URL (e.g., GitHub, GitLab). |
