@@ -58,10 +58,10 @@ Git push command pushes commits, files, history from LOCAL to REMOTE branch.
 ### Typical workflow
 ```bash
 git status
-git add changes                          # stage files
-git commit -m "your message"             # RECORD and ADD snapshot to default local_branch (create) or specified one (apply) 
-git push -u repo_alias branch            # push local to remote and set tracking
-git push --force ... ... ...             # overwrite the remote_branch with the local_branch
+git add changes                                                # stage files
+git commit -m "your message"                                   # RECORD and ADD snapshot to default local_branch (create) or specified one (apply) 
+git push -u repo_alias (local_branch:)remote_branch            # push local to remote and set tracking
+git push --force ... ... ...                                   # overwrite the remote_branch with the local_branch
 ```
 !Push is allowed only if the local branch is ahead of the remote.
 Git add + git commit -> creates a local branch if there isn't any.
