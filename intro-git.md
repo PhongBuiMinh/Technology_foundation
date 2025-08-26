@@ -21,6 +21,9 @@ git branch -r                            # shows remote branches
 git branch -a                            # shows all branches
 ```
 
+* branch                                       # current branch 
+repo_alias/HEAD -> repo_alias/remote_branch    # remote's default branch
+
 ### Configuration
 ```bash
 git branch -M main                       # rename current branch to 'main'
@@ -35,8 +38,6 @@ git branch new_branch                    # create local branch
 git branch -d branch-name                # delete local branch
 git push origin --delete branch-name     # delete remote branch
 ```
-
-current branch -> repo_alias/HEAD.
 
 ---
 
