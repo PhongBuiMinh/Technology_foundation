@@ -16,7 +16,7 @@
 
 ### SSH - SSH KEY
 ```bash
-ssh-keygen -t ed25519 -C "your_email@example.com" # -t keytype, -C label
+ssh-keygen -t ed25519 -C "email@example.com"      # -t keytype, -C label
 ~/.ssh/id_ed25519                                 # path to the key pair
 ssh -T git@github.com                             # test the connection
 ```
