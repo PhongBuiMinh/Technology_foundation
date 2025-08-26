@@ -12,7 +12,7 @@
 | `git remote remove <remote-repo>`     | Removes a reference to a remote repository. |
 | `rm -rf .git`     | Deletes the entire Git history and configuration for the current folder (project). |
 
-!Every .git repository has its OWN branch/es with commit history.
+❗Every .git repository has its OWN branch/es with commit history.
 
 ## 🌐 CONNECTION
 
@@ -22,7 +22,7 @@ ssh-keygen -t ed25519 -C "email@example.com"      # -t keytype; -C label
 ~/.ssh/id_ed25519                                 # path to the key pair
 ssh -T git@github.com                             # test the connection
 ```
-SSH is like having a private tunnel between client and server, it uses a pair of cryptographic keys to silently prove the identity.
+❕SSH is like having a private tunnel between client and server, it uses a pair of cryptographic keys to silently prove the identity.
 
 ### HTTPS - PERSONAL ACCESS TOKEN
 ```bash
@@ -31,7 +31,7 @@ SSH is like having a private tunnel between client and server, it uses a pair of
 3. get scopes (permission)
 4. generate and copy
 ```
-PAT is like a secure and customizable password, it’s used to authenticate with services.
+❕PAT is like a secure and customizable password, it’s used to authenticate with services.
 
 ## 🌿 BRANCH
 
@@ -87,7 +87,7 @@ git commit -m "message"                                            # RECORD and 
 git push -u <remote-repo> <(local-branch:)remote-branch>           # push local branch to remote; -u set tracking; create repo_alias/repo_branch if it doesnt exist
 git push --force <remote-repo> <remote-branch>                     # overwrite remote branch with local branch
 ```
-!Push is allowed only if the local branch is ahead of the remote.   
+❗Push is allowed only if the local branch is ahead of the remote.   
 Git add + git commit -> creates a local branch if there isn't any.
 
 ---
@@ -102,7 +102,7 @@ git ls-tree -r --name-only <new-local-branch>                                   
 git push <remote-repo> <new-local-branch>:<remote-branch>         
 ```
 Create a subtree split for the directory and pushes that split as a new separate branch.   
-!Remove files and their history only on temporary branch.
+❗Remove files and their history only on temporary branch.
 
 ---
 
