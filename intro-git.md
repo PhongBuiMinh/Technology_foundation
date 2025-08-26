@@ -12,6 +12,25 @@
 
 !Every git repository has its OWN branch/es with commit history.
 
+## CONNECTION
+
+### SSH - SSH KEY
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com" # -t keytype, -C label
+~/.ssh/id_ed25519                                 # path to the key pair
+ssh -T git@github.com                             # test the connection
+```
+SSH is like having a private tunnel between client and server, it uses a pair of cryptographic keys to silently prove the identity.
+
+### HTTPS - PERSONAL ACCESS TOKEN
+```bash
+github_settings
+choose fine-grained or classic token # classic - general scope - entire account; detailed - specific repos
+get scopes (permission)
+generate and copy
+```
+PAT is like a secure and customizable password, it’s used to authenticate with services.
+
 ## 🌿 BRANCH
 
 ### Types
