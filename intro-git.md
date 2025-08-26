@@ -57,9 +57,9 @@ Combination: `git checkout -b local_branch remote_alias/remote_branch` creates l
 
 ### Operation
 ```bash
-git branch <new-local-branch>                        # create local branch
-git branch -d <local-branch>                         # delete local branch
-git push <remote-repo> --delete <remote-branch>      # delete remote branch
+git branch <new-local-branch>                        --- create local branch
+git branch -d <local-branch>                         --- delete local branch
+git push <remote-repo> --delete <remote-branch>      --- delete remote branch
 ```
 
 ---
@@ -114,7 +114,7 @@ git fetch <remote-repo> <remote-branch>
 ```
 Grab new commits from the remote without merging—like observing quietly.
 
-git stash stach the local changes
+<!-- git stash stach the local changes -->
 
 ### Streamlined Update: Fetch + Rebase
 ```bash
