@@ -54,7 +54,6 @@ Combination: `git checkout -b local_branch remote_alias/remote_branch` creates l
 ### Operation
 ```bash
 git branch new_branch                    # create local branch
-git branch repo_alias/new_branch         # create remote branch
 git branch -d branch-name                # delete local branch
 git push origin --delete branch-name     # delete remote branch
 ```
