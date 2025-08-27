@@ -30,8 +30,6 @@ int	main(void)
 	if (fd < 0)
 		return (1);
 
-
-
 	// WRITE TO FD (REDIRECTING OUTPUT)
 	// write() -> printf();
 
@@ -44,8 +42,6 @@ int	main(void)
 
 	// write to file in terminal
 	// file.exe > destinational file
-
-
 
 	// READ FROM FD (REDIRECTING OUTPUT)
 	// read() -> scanf()/fget();
@@ -64,8 +60,6 @@ int	main(void)
 
 	// read from file in terminal
 	// file.exe < destinational file
-
-
 
 	// CLOSE FD
 	// close() -> fclose();

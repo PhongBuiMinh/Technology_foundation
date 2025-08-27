@@ -9,10 +9,9 @@ int main(void)
 
 	for (int i = 0; i < MAX_LENGTH; i++)
 		printf("%i\n", arr[i]);
-
 	sum = 0;
 	for (int i = 0; i < MAX_LENGTH; i++)
-		sum += arr[i]; 
+		sum += arr[i];
 	printf("Sum: %i\n", sum);
 	return(0);
 }
