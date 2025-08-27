@@ -1,8 +1,0 @@
-GCC = CC
-CFLAGS = -Wall -Wextra -Werror 
-
-hello.c: hello.o
-	$(CC) $(CFLAGS) hello.o -o hello
-
-hello.o:
-	$(CC) $(CFLAGS) -c hello.c
