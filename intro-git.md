@@ -129,12 +129,24 @@ git merge <upstream>        # merge source branch into current branch
 Create a new merge commit in the local branch by combining the changes from both banches. The history includes merge commits (preserved).
 
 
-### Full update: Pull = Fetch + Merge
+### Full update: Pull = Fetch + Merge / Rebase / Fast-Forward
 ```bash
-git pull <remote-repo> <remote-branch>
+git pull <remote-repo> <remote-branch>    # fetch + merge by default
+git pull --no-rebase                      # fetch + merge
+git pull --rebase
+git pull --ff-only
+git pull <remote-repo> <remote-branch> --allow-unrelated-histories
 ```
-Bring remote changes into your current branch—fetches and merges together.   
+Bring remote changes into your current branch—fetches and merges together, by default.   
 It assumes the local repo has a local branch already.
+
+### 🔧 Set a default behavior (optional)
+```bash
+git config pull.rebase false              # always merge
+git config pull.rebase true               # always rebase
+git config pull.ff only                   # only fast-forward 
+git config --global <flag>                # apply setting to across all repos
+```
 
 ---
 
