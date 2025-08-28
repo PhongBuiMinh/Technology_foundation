@@ -46,6 +46,7 @@ git branch -a                                        # show all branches
 repo_alias/HEAD -> repo_alias/remote_branch    --- remote's default branch   
 branch                                         --- indicate local branch   
 repo/branch                                    --- indicate remote branch
+❕remote branch are read only references
 
 ### Configuration
 ```bash
