@@ -55,7 +55,7 @@ repo/branch                                    --- indicate remote branch
 git branch <new-branch>                              # create new branch pointing to the current commits
 git branch -M <new-name>                             # rename current branch to 'new name'
 git branch -m <old-branch> <new-branch>              # rename branch 'old' to 'new'
-git checkout <branch>                           # switch to branch
+git checkout <branch>                                # switch to branch
 ```
 Combination:   
 `git checkout -b local_branch remote_alias/remote_branch` creates local branch -> sets it to track remote branch -> copies remote's commit history -> switches to new local branch.   
