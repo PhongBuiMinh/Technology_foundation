@@ -55,7 +55,8 @@ git branch -M <new-name>                             # rename current branch to 
 git branch -m <old-branch> <new-branch>              # rename branch 'old' to 'new'
 git checkout (-b) <branch>                           # switch to branch; -b create branch
 ```
-Combination: `git checkout -b local_branch remote_alias/remote_branch` creates local_branch -> sets it to track remote_branch -> copies commit history -> switches to local_branch.
+Combination: `git checkout -b local_branch remote_alias/remote_branch` creates local_branch -> sets it to track remote_branch -> copies commit history -> switches to local_branch.   
+`git branch --set-upstream-to=<remote-repo>/<remote-branch> <local-branch>` sets tracking.
 
 ### Operation
 ```bash
