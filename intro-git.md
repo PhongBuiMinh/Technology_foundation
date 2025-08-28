@@ -40,10 +40,12 @@ ssh -T git@github.com                             # test the connection
 git branch                                           # show local branches
 git branch -r                                        # show remote branches
 git branch -a                                        # show all branches
+git branch -vv                                       # check what local branch is tracking
 ```
-
 \* branch                                      --- current branch   
 repo_alias/HEAD -> repo_alias/remote_branch    --- remote's default branch   
+git remote set-head origin -a                  --- update local git to match repo's default branch   
+   
 branch                                         --- indicate local branch   
 repo/branch                                    --- indicate remote branch
 ❕remote branch are read only references
@@ -53,9 +55,10 @@ repo/branch                                    --- indicate remote branch
 git branch <new-branch>                              # create new branch pointing to the current commits
 git branch -M <new-name>                             # rename current branch to 'new name'
 git branch -m <old-branch> <new-branch>              # rename branch 'old' to 'new'
-git checkout (-b) <branch>                           # switch to branch; -b create branch
+git checkout <branch>                           # switch to branch
 ```
-Combination: `git checkout -b local_branch remote_alias/remote_branch` creates local_branch -> sets it to track remote_branch -> copies commit history -> switches to local_branch.   
+Combination:   
+`git checkout -b local_branch remote_alias/remote_branch` creates local branch -> sets it to track remote branch -> copies remote's commit history -> switches to new local branch.   
 `git branch --set-upstream-to=<remote-repo>/<remote-branch> <local-branch>` sets tracking.
 
 ### Operation
@@ -118,8 +121,6 @@ git fetch <remote-repo> <remote-branch>
 ```
 Grab new commits from the remote without merging—like observing quietly.
 
-<!-- git stash stach the local changes -->
-
 ### Streamlined Update: Fetch + Rebase
 ```bash
 git rebase <upstream>       # move current branch’s commits to follow the latest commits from source branch
@@ -132,7 +133,6 @@ git merge <upstream>        # merge source branch into current branch
 ```
 Create a new merge commit in the local branch by combining the changes from both banches. The history includes merge commits (preserved).
 
-
 ### Full update: Pull = Fetch + Merge / Rebase / Fast-Forward
 ```bash
 git pull <remote-repo> <remote-branch>    # fetch + merge by default
@@ -143,6 +143,24 @@ git pull <remote-repo> <remote-branch> --allow-unrelated-histories
 ```
 Bring remote changes into your current branch—fetches and merges together, by default.   
 It assumes the local repo has a local branch already.
+
+### Stash
+```bash
+git stash                                 # save tracked files and clear from working directory
+git stach list
+git stash show -p
+git shash pop                             # bring stashed back into the CURRENT branch
+```
+❗Should stay on the same branch before stash pop.
+
+### Differences in both branches
+
+| Problem       | Description       | Git action         |
+|---------------|--------------------|------------------------|
+| Local Changes Don’t Conflict      | local and remote changed but they touch different files or lines        | changes stay intact |
+| Local Changes Do Conflict    | local and remote changed the same lines in the same files   |  wait for developer's decision |
+| Untracked Files       | files not added to local branch (Git)   | files are untouched in any case |
+| Unrelated Histories    | local and remote branch were created independently (no shared commits)        | need flag to unblock |
 
 ### 🔧 Set a default behavior (optional)
 ```bash
@@ -173,15 +191,15 @@ git log --oneline --graph --decorate --all <upstream>
 echo "" >> README.md
 git init
 git add README.md
-git commit -m "first commit"
+git commit -m "message"
 git branch -M main
-git remote add repo_alias repo-url
-git push -u repo_alias main
+git remote add <remote-repo> <repo-url>
+git push -u <remote-repo> <remote-branch>
 ```
 
 ### Option 2: Push an existing repository
 ```bash
-git remote add repo_alias repo-url
+git remote add <remote-repo> <repo-url>
 git branch -M main
-git push -u repo_alias main
+git push -u <remote-repo> main
 ```
