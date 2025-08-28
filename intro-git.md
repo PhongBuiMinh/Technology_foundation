@@ -50,6 +50,7 @@ repo/branch                                    --- indicate remote branch
 
 ### Configuration
 ```bash
+git branch <new-branch>                              # create new branch pointing to the current commits
 git branch -M <new-name>                             # rename current branch to 'new name'
 git branch -m <old-branch> <new-branch>              # rename branch 'old' to 'new'
 git checkout (-b) <branch>                           # switch to branch; -b create branch
