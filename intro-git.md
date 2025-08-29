@@ -7,8 +7,8 @@
 | Command        | Detail |
 |----------------|------------|
 | `git init`     | Creates a `.git` directory in the folder and turns it into a Git repo—start a fresh repository. |
-| `git remote add <remote-repo> URL` | Links the local repository to a remote URL (e.g., GitHub, GitLab). |
-| `git clone`    | Copies the entire setup (commits, branches, files) from a remote repo into the machine. |
+| `git remote add <remote-repo> <URL>` | Links the local repository to a remote URL (e.g., GitHub, GitLab). |
+| `git clone <URL> <project-name>`    | Copies the entire setup (commits, branches, files) from a remote repo into the machine. |
 | `git remote remove <remote-repo>`     | Removes a reference to a remote repository. |
 | `rm -rf .git`     | Deletes the entire Git history and configuration for the current folder (project). |
 
