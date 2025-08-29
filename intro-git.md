@@ -44,7 +44,6 @@ git branch -vv                                       # check what local branch i
    
 \* branch                                            = current branch   
 repo_alias/HEAD -> repo_alias/remote_branch          = remote's default branch   
-   
 branch                                               = indicate local branch   
 repo/branch                                          = indicate remote branch
 ```
