@@ -66,6 +66,7 @@ git branch --set-upstream-to=<remote-repo>/<remote-branch> <local-branch>   # se
 git push <remote-repo> --delete <remote-branch>                             # delete remote branch
 git remote set-head origin -a                                               # update local git to match repo's default branch   
 ```
+❕Switch to another branch will update the workspace.
 
 ---
 
