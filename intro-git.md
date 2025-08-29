@@ -41,14 +41,14 @@ git branch                                           # show local branches
 git branch -r                                        # show remote branches
 git branch -a                                        # show all branches
 git branch -vv                                       # check what local branch is tracking
-```
-\* branch                                      --- current branch   
-repo_alias/HEAD -> repo_alias/remote_branch    --- remote's default branch   
-git remote set-head origin -a                  --- update local git to match repo's default branch   
    
-branch                                         --- indicate local branch   
-repo/branch                                    --- indicate remote branch
-❕remote branch are read only references
+\* branch                                            = current branch   
+repo_alias/HEAD -> repo_alias/remote_branch          = remote's default branch   
+   
+branch                                               = indicate local branch   
+repo/branch                                          = indicate remote branch
+```
+❗Remote branches are read only references.
 
 ### Configuration
 ```bash
@@ -57,15 +57,15 @@ git branch -M <new-name>                             # rename current branch to 
 git branch -m <old-branch> <new-branch>              # rename branch 'old' to 'new'
 git checkout <upstream>                              # switch to source branch
 ```
-Combination:   
-`git checkout -b local_branch remote_alias/remote_branch` creates local branch -> sets it to track remote branch -> copies remote's commit history -> switches to new local branch.   
-`git branch --set-upstream-to=<remote-repo>/<remote-branch> <local-branch>` sets tracking.
 
 ### Operation
 ```bash
-git branch <new-local-branch>                        # create local branch
-git branch -d <local-branch>                         # delete local branch
-git push <remote-repo> --delete <remote-branch>      # delete remote branch
+git branch <new-local-branch>                                               # create local branch
+git branch -d <local-branch>                                                # delete local branch
+git checkout -b local_branch remote_alias/remote_branch                     # create local branch -> sets it to track remote branch -> copies remote's commit history -> switches to new local branch.   
+git branch --set-upstream-to=<remote-repo>/<remote-branch> <local-branch>   # set tracking.
+git push <remote-repo> --delete <remote-branch>                             # delete remote branch
+git remote set-head origin -a                                               # update local git to match repo's default branch   
 ```
 
 ---
