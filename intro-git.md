@@ -44,8 +44,8 @@ git branch -vv                                       # check what local branch i
    
 \* branch                                            = current branch   
 repo_alias/HEAD -> repo_alias/remote_branch          = remote's default branch   
-branch                                               = indicate local branch   
-repo/branch                                          = indicate remote branch
+branch                                               = indicate local / remote branch   
+repo/branch                                          = indicate remote ref branch
 ```
 ❗Remote branches are read only references.
 
@@ -59,14 +59,15 @@ git checkout <upstream>                              # switch to source branch
 
 ### Operation
 ```bash
-git branch <new-local-branch>                                               # create local branch
-git branch -d <local-branch>                                                # delete local branch
-git checkout -b local_branch remote_alias/remote_branch                     # create local branch -> sets it to track remote branch -> copies remote's commit history -> switches to new local branch.   
-git branch --set-upstream-to=<remote-repo>/<remote-branch> <local-branch>   # set tracking.
-git push <remote-repo> --delete <remote-branch>                             # delete remote branch
-git remote set-head origin -a                                               # update local git to match repo's default branch   
+git branch <new-local-branch>                                          # create local branch
+git branch -d <local-branch>                                           # delete local branch
+git checkout -b <local-branch> <remote-repo/<remote-branch>            # create local branch -> sets it to track remote branch -> copies remote's commit history -> switches to new local branch.   
+git branch --set-upstream-to=<remote-branch> <local-branch>            # set tracking.
+git push <remote-repo> --delete <remote-branch>                        # delete remote branch
+git remote set-head origin -a                                          # update local git to match repo's default branch   
 ```
 ❕Switch to another branch will update the workspace.
+❕<--delete remote-branch not remote-repo/remote-branch> delete the remote branch called docker, not the local reference to it.
 
 ---
 
