@@ -14,6 +14,15 @@
 
 ❗Every .git repository has its OWN branch/es with commit history.
 
+## PULL 1 PROJECT
+```bash
+git clone --filter=blob:none --no-checkout https://<username>:<tocken>@github.com/repo.git # get repo structure and metadata
+git sparse-checkout init --cone                                                            # enable sparse checkout
+git sparse-checkout set <path-to-project/file>                                             # specify the folder/file, could be expanded later
+git checkout @                                                                             # apply the sparse rule
+git sparse-checkout disable                                                                # switch back to full checkout
+```
+
 ## 🌐 CONNECTION
 
 ### SSH - SSH KEY
