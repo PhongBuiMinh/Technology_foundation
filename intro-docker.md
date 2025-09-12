@@ -34,8 +34,9 @@ Dockerfile is a **DSL (Domain Specific Language)** for defining how to build an 
 	The build context is the folder Docker uses to locate files for COPY and ADD. Docker sends  the entire context to the daemon.
 4. Run the image to create a container:
    ```bash
-   docker run --rm -it -v $PWD:/wdr -w /wdr image # Links host directory to container. Enables access to external files.
-   docker run --rm -it image                      # Uses only internal container files. No access to host system.
+   docker run --rm -it -v $PWD:/wdr -w /wdr image  # Links host directory to container. Enables access to external files.
+   docker run --rm -it image                       # Uses only internal container files. No access to host system.
+   optional(/bin/bash -c "commands")               # Spawn Bash shell that immediately runs command string passed as argument.
 	```
 -v $PWD:/wdr → Mounts current directory into container at /wdr
 -w /wdr → Sets working directory inside container
